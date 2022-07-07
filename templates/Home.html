@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>price of edtech course</title>
+
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1 style="color:Violet;">price of edtech course</h1>
+
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	
+    	
+        <input type="text" name="Institute" placeholder="Institute" required="required" /><p>
+        <input type="text" name="Course_name" placeholder="Course_name" required="required" /><p>
+        <input type="text" name="Mode"" placeholder="Mode"" required="required" /><p>
+        <input type="text" name="Level" placeholder="Level" required="required" /><p>
+        <input type="text" name="Country" placeholder="Country" required="required" /><p>
+        <input type="text" name="City" placeholder="City" required="required" /><p>
+        <input type="text" name="Certification_Provided" placeholder="Certification_Provided" required="required" /><p>
+        <input type="text" name="Practise_assignment" placeholder="Practise_assignment"" required="required" /><p>
+        <input type="text" name="Doubt_session" placeholder="Doubt_session" required="required" /><p>
+        <input type="text" name="Internship_Provided" placeholder="Internship_Provided" required="required" /><p>
+        <input type="text" name="Placement_Assistance" placeholder="Placement_Assistance" required="required" /><p>
+        <input type="text" name="Recorded_video" placeholder="Recorded_video" required="required" /><p>
+        <input type="text" name="Duration_Hours" placeholder="Duration_Hours" required="required" /><p>
+        <input type="text" name="Trainer_grade" placeholder="Trainer_grade" required="required" /><p>
+
+       
+            
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict price </button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:Violet;">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
